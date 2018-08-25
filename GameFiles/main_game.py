@@ -18,11 +18,11 @@ class Treasure:
         self.tip=tip
         
         if self.tip=='diamond':
-            self.img=pygame.image.load('diamond.png')
+            self.img=pygame.image.load('../Images/diamond.png')
         elif self.tip=='safir':
-            self.img=pygame.image.load('safir.png')
+            self.img=pygame.image.load('../Images/safir.png')
         elif self.tip=='opal':
-            self.img=pygame.image.load('opal.png')
+            self.img=pygame.image.load('../Images/opal.png')
             
     def print_at_coord(self,screen,x,y):
         screen.blit(self.img,(x,y))
@@ -51,11 +51,11 @@ class MyPyGame(object):
         #naming the window
         pygame.display.set_caption('Space Hunter')
         #uploading the background image
-        self.background=pygame.image.load('space.jpg')
+        self.background=pygame.image.load('../Images/space.jpg')
         #blit the image on the screen
         self.screen.blit(self.background,(0,0))
         #setting fps
-        self.FPS=15
+        self.FPS=10
         self.clock=pygame.time.Clock()
         #updateting pygame window
         pygame.display.update()
@@ -68,10 +68,10 @@ class MyPyGame(object):
                 if event.type==pygame.QUIT:
                     pygame.quit()
                     quit()
-            startimg=pygame.image.load('start.png')
-            startimg1=pygame.image.load('start1.png')
-            quitimg=pygame.image.load('quit.png')
-            quitimg1=pygame.image.load('quit1.png')
+            startimg=pygame.image.load('../Images/start.png')
+            startimg1=pygame.image.load('../Images/start1.png')
+            quitimg=pygame.image.load('../Images/quit.png')
+            quitimg1=pygame.image.load('../Images/quit1.png')
             self.message_display("Welcome to Space Hunter!")
             self.message_display1("Set the timer, pick what you want to find and how you want to sort them :)")
             self.button(400,350,startimg1,startimg,"play")
@@ -384,12 +384,12 @@ class MyPyGame(object):
                 if event.type==pygame.QUIT:
                     pygame.quit()
                     quit()            
-            self.redkey=pygame.image.load('redkey.png')
-            self.redkey1=pygame.image.load('redkey1.png')
-            self.bluekey=pygame.image.load('bluekey.png')
-            self.bluekey1=pygame.image.load('bluekey1.png')
-            self.greenkey=pygame.image.load('greenkey.png')
-            self.greenkey1=pygame.image.load('greenkey1.png')\
+            self.redkey=pygame.image.load('../Images/redkey.png')
+            self.redkey1=pygame.image.load('../Images/redkey1.png')
+            self.bluekey=pygame.image.load('../Images/bluekey.png')
+            self.bluekey1=pygame.image.load('../Images/bluekey1.png')
+            self.greenkey=pygame.image.load('../Images/greenkey.png')
+            self.greenkey1=pygame.image.load('../Images/greenkey1.png')
                             
             m=30
             n=480
@@ -426,8 +426,8 @@ class MyPyGame(object):
                 self.message_display_price(str(i.get_price()),x,y)
                 x=x+90
             if self.green_keys==[] and self.blue_keys==[] and self.red_keys==[]:
-                qT=pygame.image.load('qT.png')
-                qT1=pygame.image.load('qT1.png')
+                qT=pygame.image.load('../Images/qT.png')
+                qT1=pygame.image.load('../Images/qT1.png')
                 self.button((self.display_width/2)-100,(self.display_height/2)+50,qT1,qT,"quit")
             
             pygame.display.update()
@@ -582,8 +582,8 @@ class MyPyGame(object):
                 if event.type==pygame.QUIT:
                     pygame.quit()
                     quit()
-            sort=pygame.image.load('sort_img.png')
-            sort1=pygame.image.load('sort1_img.png')
+            sort=pygame.image.load('../Images/sort_img.png')
+            sort1=pygame.image.load('../Images/sort1_img.png')
             self.button((self.display_width/2)-100,(self.display_height/2)-50,sort1,sort,"sort")
             pygame.display.update()  
     def game(self,x,y):
@@ -597,7 +597,7 @@ class MyPyGame(object):
                     quit()
             self.start_point_x=x+30
             self.start_point_y=y+15
-            self.ship=pygame.image.load('ship.png')
+            self.ship=pygame.image.load('../Images/ship.png')
             self.random_object_generator(10)
             self.good_list=self.obj_to_found(self.objects)            
             self.start_pos=(self.start_point_x,self.start_point_y)
@@ -814,11 +814,11 @@ class MyPyGame(object):
                     if event.type==pygame.QUIT:
                         pygame.quit()
                         quit()
-                self.background=pygame.image.load('space.jpg')
+                self.background=pygame.image.load('../Images/space.jpg')
                 self.held_image=self.background
                 self.screen.blit(self.background,(0,0))
-                spawn=pygame.image.load('spawn.png')
-                spawn1=pygame.image.load('spawn1.png')
+                spawn=pygame.image.load('../Images/spawn.png')
+                spawn1=pygame.image.load('../Images/spawn1.png')
                 self.button(330,135,spawn1,spawn,"spawn")
                 self.button(810,135,spawn1,spawn,"spawn")
                 self.button(330,405,spawn1,spawn,"spawn")
